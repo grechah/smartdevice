@@ -10,3 +10,16 @@
   margin: 0 auto;
   min-height: 4250px;
 }
+
+
+@media (max-width: 770px) {
+  .container {
+    max-width: 770px;
+  }
+}
+
+@media (max-width: 330px) {
+  .container {
+    max-width: 330px;
+  }
+}

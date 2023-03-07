@@ -25,7 +25,6 @@
   text-decoration: none;
   color: #f2f5f7;
   height: 20px;
-  min-width: 225px;
   width: 100%;
   justify-content: flex-start;
   padding-left: 30px;
@@ -43,6 +42,7 @@
   background: url("../img/email.svg") no-repeat 30px;
   justify-content: center;
   padding: 0;
+  padding-left: 40px;
 }
 
 .nav__phone {
@@ -59,4 +59,60 @@
   padding: 10px 15px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  cursor: pointer;
+}
+
+@media (max-width: 1030px) {
+  .header {
+    width: 100%;
+    padding: 0;
+  }
+
+  .nav__list {
+    position: relative;
+  }
+
+  .nav__mail {
+    position: absolute;
+    top: 40%;
+    right: -85%;
+  }
+
+  .nav__phone {
+    position: absolute;
+    top: 40%;
+    right: -94%;
+  }
+
+  .nav__text {
+    display: none;
+  }
+
+  .nav__button {
+    display: none;
+  }
+}
+
+@media (max-width: 597px) {
+  .header {
+    width: 100%;
+    padding: 0;
+  }
+
+  .nav__link {
+    min-width: none;
+  }
+
+  .nav__link:first-of-type {
+    min-width: 35px;
+  }
+
+  .nav__logo {
+    background: url("../img/logo-mobile.svg") no-repeat center;
+    width: 35px;
+  }
+
+  // .nav__mail {
+  //   right: -55%;
+  // }
 }

@@ -1,0 +1,138 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #041827;
+  min-height: 280px;
+}
+
+.footer__container {
+  display: flex;
+  column-gap: 50px;
+}
+
+.social__logo {
+  display: flex;
+  background: url("../img/logo.svg") no-repeat center;
+  width: 215px;
+  height: 55px;
+  padding: 0;
+  margin-top: 5px;
+}
+
+.social__list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 35px;
+}
+
+.social__link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+}
+
+.ok__link {
+  background: url("../img/ok.svg") no-repeat center;
+}
+
+.vk__link {
+  background: url("../img/vk.svg") no-repeat center;
+}
+
+.pint__link {
+  background: url("../img/pinterest.svg") no-repeat center;
+}
+
+.sitemap {
+  display: flex;
+  flex-direction: column;
+  min-width: 470px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.footer__title {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Roboto Condensed", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.sitemap__list {
+  display: grid;
+  grid-template-columns: repeat(2, 220px);
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+  row-gap: 10px;
+  column-gap: 30px;
+}
+
+.sitemap__link,
+.contacts__description,
+.contacts__phone {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 135%;
+}
+
+.contacts__description {
+  margin-top: 20px;
+}
+
+.contacts__phone {
+  margin-top: 10px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10px;
+}
+
+@media (max-width: 1350px) {
+  .footer {
+    padding: 50px 55px 65px;
+  }
+
+  .footer__container {
+    flex-direction: column;
+  }
+
+  .footer__wrapper {
+    display: flex;
+  }
+
+  .social {
+    display: flex;
+    justify-content: space-between;
+    min-width: 215px;
+    width: 100%;
+  }
+
+  .sitemap {
+    min-width: 220px;
+    width: 50%;
+  }
+
+  .sitemap__list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+@media (max-width: 330px) {
+  .social {
+    flex-wrap: wrap;
+  }
+}
