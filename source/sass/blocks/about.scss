@@ -1,23 +1,14 @@
 .about {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 970px;
-  width: 100%;
   margin: 0 auto;
-  height: 489px;
+  margin-top: 120px;
 }
 
-.about::before {
-  position: absolute;
-  content: "";
-  width: 320px;
-  height: 300px;
-  top: 100px;
-  left: -310px;
-  background: url(../img/2022.png) no-repeat center;
+.about__container {
+  box-sizing: border-box;
+  display: flex;
+  column-gap: 70px;
 }
+
 
 .about__title {
   font-family: "Roboto Condensed", sans-serif;
@@ -29,11 +20,16 @@
 }
 
 .about__description {
+  position: relative;
   color: #041827;
   font-size: 16px;
   line-height: 22px;
   margin: 0;
   margin-top: 15px;
+}
+
+.about__description.hidden {
+  display: none;
 }
 
 .about__button {
@@ -48,43 +44,47 @@
   align-items: center;
   width: 100%;
   padding: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+}
+
+.about__button.hidden {
+  display: none;
+}
+
+.about__button--secondary.hidden {
+  display: none;
 }
 
 @media (max-width: 1440px) {
-  .about {
-    max-width: 674px;
-    width: 100%;
+  .about__container {
+    max-width: 100%;
+  }
+
+  .about__description::before {
+    left: -40%;
   }
 }
 
-@media (max-width: 1206px) {
-  .about {
-    max-width: 400px;
-    width: 100%;
-    height: 450px;
+@media (max-width: 769px) {
+  .about__container {
+    max-width: 100%;
     margin-top: 50px;
 }
+
+.about__picture {
+  display: none;
+}
   
+.about__description::before {
+  left: -70%;
+}
 
   .about::before {
     display: none;
   }
 }
 
-@media (max-width: 480px) {
-  .about {
-    max-width: 350px;
-    width: 100%;
-    height: 450px;
-    margin-top: 50px;
-}
-}
 
-@media (max-width: 480px) {
-  .about {
-    max-width: 320px;
-    width: 100%;
-    height: 450px;
-    margin-top: 50px;
-}
-}

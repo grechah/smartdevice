@@ -42,7 +42,7 @@
 }
 
 .blocks__title {
-  margin-top: 95px;
+  margin-top: 25px;
   font-family: "Roboto Condensed", sans-serif;
   color: #00b2ff;
   font-weight: 400;
@@ -57,58 +57,34 @@
   color: #041827;
 }
 
-.block__terms,
-.block__confidential,
-.block__price,
-.block__suppliers {
+.blocks__item--terms,
+.blocks__item--confidential,
+.blocks__item--price,
+.blocks__item--suppliers {
   position: relative;
 }
 
-.block__terms::before {
-  position: absolute;
-  content: "";
-  width: 35px;
-  height: 35px;
-  top: 60px;
-  left: 42px;
-  background: url("../img/stopwatch.svg") no-repeat center;
-}
-
-.block__suppliers::before {
-  position: absolute;
-  content: "";
-  width: 35px;
-  height: 35px;
-  top: 60px;
-  left: 42px;
-  background: url("../img/hired.svg") no-repeat center;
-}
-
-.block__confidential::before {
-  position: absolute;
-  content: "";
-  width: 35px;
-  height: 35px;
-  top: 60px;
-  left: 42px;
-  background: url("../img/detective.svg") no-repeat center;
-  background-color: #00b2ff;
-}
-
-.block__price::before {
-  position: absolute;
-  content: "";
-  width: 35px;
-  height: 35px;
-  top: 60px;
-  left: 42px;
-  background: url("../img/tag.svg") no-repeat center;
-  background-color: #00b2ff;
+.blocks__item:hover .blocks__image {
+  stroke:  #ffffff;
 }
 
 @media (max-width: 1330px) {
+
+  .blocks__list {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  
   .blocks__item {
     min-width: 320px;
     height: 410px;
+  }
+
+  .blocks__description {
+    font-family: 'PT Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 135%;
   }
 }

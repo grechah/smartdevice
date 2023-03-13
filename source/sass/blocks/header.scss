@@ -1,11 +1,9 @@
 .header {
   position: fixed;
   top: 0;
-  padding: 0 100px;
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   z-index: 1;
   box-sizing: border-box;
-  max-width: 1920px;
   width: 100%;
 }
 
@@ -69,20 +67,20 @@
   }
 
   .nav__list {
-    position: relative;
+    justify-content: unset;
   }
 
-  .nav__mail {
-    position: absolute;
-    top: 40%;
-    right: -85%;
+  .nav__element:nth-child(1) {
+    margin-right: auto;
   }
-
+  .nav__mail,
   .nav__phone {
-    position: absolute;
-    top: 40%;
-    right: -94%;
+    background-position: center;
+    padding: 0;
+    width: 40px;
+    height: 40px;
   }
+
 
   .nav__text {
     display: none;
@@ -99,6 +97,14 @@
     padding: 0;
   }
 
+  .nav {
+    padding-left: 30px;
+  }
+
+  .nav__element:nth-child(2) {
+    margin-left: auto;
+  }
+
   .nav__link {
     min-width: none;
   }
@@ -112,7 +118,7 @@
     width: 35px;
   }
 
-  // .nav__mail {
-  //   right: -55%;
-  // }
+  .nav__phone {
+    right: -97%;
+  }
 }

@@ -1,50 +1,108 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
-import {Form} from './modules/form-validate/form';
+const navButton = document.querySelector('.nav__button');
+const mainButton = document.querySelector('.main__button');
+const mainButtonMobile = document.querySelector('.main__button--mobile');
+const popup = document.querySelector('.popup');
+const popupContainer = document.querySelector('.popup__container');
+const popupNameField = document.querySelector('.popup__name');
+const popupCloseButton = document.querySelector('.popup__close');
+const aboutButton = document.querySelector('.about__button');
+const hideButton = document.querySelector('.about__button--secondary');
+const aboutDescription = document.querySelector('.about__description--secondary');
+const sitemap = document.querySelector('.sitemap');
+const sitemapList = document.querySelector('.sitemap__list');
+const contacts = document.querySelector('.contacts');
+const contactsWrapper = document.querySelector('.contacts__wrapper');
+const sitemapOpenButton = document.querySelector('.sitemap__button--open');
+const sitemapCloseButton = document.querySelector('.sitemap__button--close');
+const contactsOpenButton = document.querySelector('.contacts__button--open');
+const contactsCloseButton = document.querySelector('.contacts__button--close');
+const phone = document.querySelector(".popup__telephone");
 
-// ---------------------------------
 
-window.addEventListener('DOMContentLoaded', () => {
+navButton.addEventListener('click', () => {
+  popup.classList.remove('closed');
+  popupContainer.classList.remove('closed');
+  popupContainer.classList.add('show')
+  popup.classList.add('show')
+  popupNameField.focus();
+});
 
-  // Utils
-  // ---------------------------------
 
-  iosVhFix();
+popupCloseButton.addEventListener('click', () => {
+  popup.classList.remove('show');
+  popupContainer.classList.remove('show');
+  popup.classList.add('closed');
+  popupContainer.classList.add('closed');
+});
 
-  // Modules
-  // ---------------------------------
-
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
-  window.addEventListener('load', () => {
-    initModals();
-    const form = new Form();
-    window.form = form;
-    form.init();
+mainButton.addEventListener('click', () => {
+  window.scrollTo({
+    top:3100, 
+    left:3100,
+    behavior: 'smooth'
   });
 });
 
-// ---------------------------------
+mainButtonMobile.addEventListener('click', () => {
+  window.scrollTo({
+    top:5000, 
+    left:5000,
+    behavior: 'smooth'
+  });
+});
 
-// ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
+aboutButton.addEventListener('click', () => {
+  aboutDescription.classList.toggle('hidden')
+  if (aboutDescription.classList.contains('hidden')) {
+    hideButton.classList.add('hidden');
+    aboutButton.classList.remove('hidden');
+  } else {
+    aboutButton.classList.add('hidden');
+    hideButton.classList.remove('hidden')
+  }
+});
 
-// привязывайте js не на классы, а на дата атрибуты (data-validate)
+hideButton.addEventListener('click', () => {
+  aboutDescription.classList.toggle('hidden')
+  if (aboutDescription.classList.contains('hidden')) {
+    hideButton.classList.add('hidden');
+    aboutButton.classList.remove('hidden');
+  } else {
+    aboutButton.classList.add('hidden');
+    hideButton.classList.remove('hidden')
+  }
+});
 
-// вместо модификаторов .block--active используем утилитарные классы
-// .is-active || .is-open || .is-invalid и прочие (обязателен нейминг в два слова)
-// .select.select--opened ❌ ---> [data-select].is-open ✅
+sitemap.addEventListener('click', (evt) => {
+  if (!contactsWrapper.classList.contains('hidden')) {
+    contactsWrapper.classList.add('closed')
+    contactsCloseButton.classList.add('hidden');
+    contactsOpenButton.classList.remove('hidden');
+  }
+  if (evt.target.classList.contains('sitemap__button--open')) {
+    sitemapOpenButton.classList.add('hidden');
+    sitemapCloseButton.classList.remove('hidden');
+    sitemapList.classList.remove('closed');
+  } else {
+    sitemapOpenButton.classList.remove('hidden');
+    sitemapCloseButton.classList.add('hidden');
+    sitemapList.classList.add('closed');
+  }
+})
 
-// выносим все в дата атрибуты
-// url до иконок пинов карты, настройки автопрокрутки слайдера, url к json и т.д.
-
-// для адаптивного JS используется matchMedia и addListener
-// const breakpoint = window.matchMedia(`(min-width:1024px)`);
-// const breakpointChecker = () => {
-//   if (breakpoint.matches) {
-//   } else {
-//   }
-// };
-// breakpoint.addListener(breakpointChecker);
-// breakpointChecker();
-
-// используйте .closest(el)
+contacts.addEventListener('click', (evt) => {
+  if (!sitemapList.classList.contains('closed')) {
+    sitemapList.classList.add('closed')
+    sitemapCloseButton.classList.add('hidden');
+    sitemapOpenButton.classList.remove('hidden');
+  }
+  if (evt.target.classList.contains('contacts__button--close')) {
+    contactsCloseButton.classList.add('hidden');
+    contactsOpenButton.classList.remove('hidden');
+    contactsWrapper.classList.add('closed');
+  } else {
+    contactsOpenButton.classList.add('hidden');
+    contactsCloseButton.classList.remove('hidden');
+    contactsWrapper.classList.remove('closed');
+  }
+})

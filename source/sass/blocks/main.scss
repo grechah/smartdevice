@@ -1,15 +1,39 @@
 .main {
-  position: relative;
   height: 880px;
   background-color: #041827;
   background: url("../img/main-background.jpg") no-repeat center/cover;
+  
+  @media (max-width: 1030px) {
+    background: url("../img/main-background-tablet.jpg") no-repeat center/cover;
+  
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/main-background-tablet-2x.jpg") no-repeat center/cover;
+  }
+}
+
+  @media (max-width: 552px) {
+    background: url("../img/main-background-mobile.jpg") no-repeat center/cover;
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/main-background-mobile-2x.jpg") no-repeat center/cover;
+  }
+}
+}
+
+
+.main__container {
+  height: 880px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 40px;
 }
 
 .main__title {
   margin: 0;
-  position: absolute;
-  top: 35%;
-  left: 20%;
+  margin-left: 150px;
   color: #f2f5f6;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
@@ -20,10 +44,8 @@
 }
 
 .main__description {
-  position: absolute;
   margin: 0;
-  top: 50%;
-  left: 20%;
+  margin-left: 150px;
   color: #f2f5f7;
   font-family: 'PT Mono';
   font-weight: 400;
@@ -33,24 +55,64 @@
   display: flex;
 }
 
-@media (max-width: 770px) {
+.main__button,
+.main__button--mobile {
+  background-color: #00B2FF;
+  border: none;
+  padding: 15px 25px;
+  font-family: 'Roboto Condensed';
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  margin-left: 150px;
+}
+
+.main__button--mobile {
+  display: none;
+}
+
+@media (max-width: 1030px) {
   .main__title {
     font-size: 64px;
     line-height: 75px;
+    margin-left: 100px;
+    letter-spacing: 0.07em;
   }
 
   .main__description {
     font-size: 22px;
+    margin-left: 100px;
+  }
+
+  .main__button {
+    margin-left: 100px;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 552px) {
   .main__title {
     font-size: 36px;
     line-height: 42px;
+    margin-left: 0;
   }
 
   .main__description {
     font-size: 14px;
+    margin-left: 0;
+  }
+
+  .main__button {
+    display: none;
+  }
+
+  .main__button--mobile {
+    display: flex;
+    margin-left: 0;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
   }
 }
