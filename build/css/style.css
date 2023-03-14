@@ -110,7 +110,7 @@
   background-color: transparent;
   border: 1px solid #f2f5f7;
   color: #f2f5f6;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   padding: 10px 15px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -145,7 +145,7 @@
   margin: 0;
   margin-left: 150px;
   color: #f2f5f6;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 80px;
   line-height: 94px;
@@ -153,11 +153,11 @@
   text-transform: uppercase;
 }
 
-.main__description {
+.main__title + span {
   margin: 0;
   margin-left: 150px;
   color: #f2f5f7;
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 22px;
   line-height: 155%;
@@ -172,7 +172,7 @@
   background-color: #00B2FF;
   border: none;
   padding: 15px 25px;
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
@@ -264,7 +264,7 @@
 .footer__title {
   margin: 0;
   color: #ffffff;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -298,14 +298,14 @@
 }
 
 .sitemap__link,
-.contacts__description,
+.contacts__wrapper > span,
 .contacts__phone {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.7);
   line-height: 135%;
 }
 
-.contacts__description {
+.contacts__wrapper > span {
   margin-top: 20px;
 }
 
@@ -388,7 +388,7 @@
 
 .blocks__title {
   margin-top: 25px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #00b2ff;
   font-weight: 400;
   font-size: 24px;
@@ -430,7 +430,7 @@
 }
 
 .about__title {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #041827;
   font-weight: 400;
   font-size: 36px;
@@ -512,7 +512,7 @@
 .products__title {
   margin: 0;
   color: #ffffff;
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
@@ -568,7 +568,7 @@
 .products__link {
   text-decoration: none;
   color: #ffffff;
-  font-family: "Roboto Condensed";
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -608,13 +608,13 @@
 .feedback__title {
   margin: 0;
   color: #ffffff;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
 }
 
-.feedback__description {
+.feedback__title + span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -624,7 +624,7 @@
   margin-top: 15px;
 }
 
-.feedback__form {
+.feedback__wrapper > form {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 275px 275px;
@@ -654,7 +654,7 @@
 
 .input::-webkit-input-placeholder {
   color: #ffffff;
-  font-family: "PT Mono", sans-serif;
+  font-family: "PT Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -662,7 +662,7 @@
 
 .input::-moz-placeholder {
   color: #ffffff;
-  font-family: "PT Mono", sans-serif;
+  font-family: "PT Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -670,7 +670,7 @@
 
 .input:-ms-input-placeholder {
   color: #ffffff;
-  font-family: "PT Mono", sans-serif;
+  font-family: "PT Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -678,7 +678,7 @@
 
 .input::-ms-input-placeholder {
   color: #ffffff;
-  font-family: "PT Mono", sans-serif;
+  font-family: "PT Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -686,7 +686,7 @@
 
 .input::placeholder {
   color: #ffffff;
-  font-family: "PT Mono", sans-serif;
+  font-family: "PT Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -695,7 +695,7 @@
 .feedback__button {
   background-color: #041427;
   border: none;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
@@ -751,12 +751,12 @@
   background: url("../img/checkbox.svg") no-repeat center;
 }
 
-.feedback__checkbox-name {
+.feedback__label > span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 234px;
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -827,7 +827,7 @@
   margin-top: 15px;
 }
 
-.popup__form {
+.popup__wrapper > form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -885,14 +885,14 @@
   background: url("../img/checkbox.svg") no-repeat center;
 }
 
-.popup__checkbox-name {
+.popup__label > span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -975,7 +975,7 @@
   }
 
   .blocks__description {
-    font-family: "PT Mono";
+    font-family: "PT Mono", "Arial", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -1025,11 +1025,11 @@
     display: none;
   }
 
-  .feedback__description {
+  .feedback__title + span {
     margin-top: 10px;
   }
 
-  .feedback__form {
+  .feedback__wrapper > form {
     -ms-grid-columns: 320px 320px;
     grid-template-columns: 320px 320px;
   }
@@ -1091,7 +1091,7 @@
     height: 40px;
   }
 
-  .nav__text {
+  .nav__link > span {
     display: none;
   }
 
@@ -1110,7 +1110,7 @@
     letter-spacing: 0.07em;
   }
 
-  .main__description {
+  .main__title + span {
     font-size: 22px;
     margin-left: 100px;
   }
@@ -1170,7 +1170,7 @@
     align-items: flex-start;
   }
 
-  .feedback__form {
+  .feedback__wrapper > form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1192,7 +1192,7 @@
     left: 0;
   }
 
-  .feedback__description {
+  .feedback__title + span {
     margin-top: 20px;
   }
 }
@@ -1402,7 +1402,7 @@
     margin-left: 0;
   }
 
-  .main__description {
+  .main__title + span {
     font-size: 14px;
     margin-left: 0;
   }

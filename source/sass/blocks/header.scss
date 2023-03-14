@@ -53,7 +53,7 @@
   background-color: transparent;
   border: 1px solid #f2f5f7;
   color: #f2f5f6;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   padding: 10px 15px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -81,8 +81,7 @@
     height: 40px;
   }
 
-
-  .nav__text {
+  .nav__link > span {
     display: none;
   }
 

@@ -60,7 +60,7 @@
 .footer__title {
   margin: 0;
   color: #ffffff;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -85,14 +85,14 @@
 }
 
 .sitemap__link,
-.contacts__description,
+.contacts__wrapper > span,
 .contacts__phone {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.7);
   line-height: 135%;
 }
 
-.contacts__description {
+.contacts__wrapper > span {
   margin-top: 20px;
 }
 

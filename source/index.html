@@ -18,12 +18,12 @@
             </li>
             <li class="nav__element">
               <a href="#" class="nav__link nav__mail">
-                <span class="nav__text">info@sd.ru</span>
+                <span>info@sd.ru</span>
               </a>
             </li>
             <li class="nav__element">
               <a href="tel:+7(495)0005252" class="nav__link nav__phone">
-                <span class="nav__text">+7 (495) 000 52 52</span>
+                <span>+7 (495) 000 52 52</span>
               </a>
             </li>
             <li class="nav__element">
@@ -37,7 +37,7 @@
         <section class="main">
           <div class="container main__container">
           <h1 class="main__title">Печатные платы</h1>
-          <span class="main__description">производство и монтаж, поставка комплектующих, блоков и модулей</span>
+          <span>производство и монтаж, поставка комплектующих, блоков и модулей</span>
           <button type="button" class="button main__button">Получить бесплатную консультацию</button>
           <button type="button" class="button main__button main__button--mobile">Бесплатная консультация</button>
           </div>
@@ -108,6 +108,7 @@
         <section class="about">
           <div class="container about__container">
             <picture class="about__picture">
+              <source srcset="./img/2022.webp, img/2022-2x.webp 2x">
               <img class="about__image" src="./img/2022.png" width="150" height="320" srcset="./img/2022-2x.png 2x" alt="2022">
             </picture>
             <div class="about__wrapper">
@@ -147,21 +148,24 @@
           <h1 class="visually-hidden">Обратная связь</h1>
           <div class="container feedback__container">
             <picture class="feedback__picture">
+              <source srcset="./img/paper_airplane.webp, img/paper_airplane-2x.webp 2x">
               <img class="feedback__image" src="./img/paper_airplane.png" width="510" height="285" srcset="./img/paper_airplane-2x.png 2x" alt="airplane">
             </picture>
             <div class="feedback__wrapper">
           <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
-          <span class="feedback__description">Мы проконсультируем Вас бесплатно</span>
-          <form class="feedback__form">
-            <input type="text" class="feedback__name input" placeholder="Имя" required>
-            <input type="tel" class="feedback__telephone input" placeholder="" required>
+          <span>Мы проконсультируем Вас бесплатно</span>
+          <form>
+            <input type="text" class="feedback__name input" placeholder="Имя" required id="name">
+            <label for="name" class="visually-hidden">Имя</label>
+            <input type="tel" class="feedback__telephone input" placeholder="" required id="phone">
+            <label for="phone" class="visually-hidden">Телефон</label>
             <textarea cols="30" rows="10" class="feedback__text input" placeholder="Ваш вопрос"></textarea>
           </form>
           <div class="feedback__wrapper feedback__wrapper--buttons">
           <button type="submit" class="feedback__button button">Задать вопрос</button>
           <input type="checkbox" name="agree" class="feedback__checkbox" id="agree" required>
           <label for="agree" class="feedback__label">
-          <span class="feedback__checkbox-name">Я согласен на обработку  персональных данных</span>
+          <span>Я согласен на обработку  персональных данных</span>
         </label>
         </div>
       </div>
@@ -175,13 +179,13 @@
           <a href="#" class="social__logo"></a>
           <ul class="social__list">
             <li class="social__item">
-              <a href="" class="social__link social__link--ok"></a>
+              <a href="#" class="social__link social__link--ok"></a>
             </li>
             <li class="social__item">
-              <a href="" class="social__link social__link--vk"></a>
+              <a href="#" class="social__link social__link--vk"></a>
             </li>
             <li class="social__item">
-              <a href="" class="social__link social__link--pint"></a>
+              <a href="#" class="social__link social__link--pint"></a>
             </li>
           </ul>
         </section>
@@ -192,25 +196,25 @@
           <span class="sitemap__button sitemap__button--close hidden"></span>
           <ul class="sitemap__list closed">
             <li class="sitemap__item">
-              <a href="" class="sitemap__link">О компании</a>
+              <a href="#" class="sitemap__link">О компании</a>
             </li>
             <li class="sitemap__item">
-              <a href="" class="sitemap__link">Комплектующие</a>
+              <a href="#" class="sitemap__link">Комплектующие</a>
             </li>
             <li class="sitemap__item">
-              <a href="" class="sitemap__link">Продукты</a>
+              <a href="#" class="sitemap__link">Продукты</a>
             </li>
             <li class="sitemap__item">
-              <a href="" class="sitemap__link">Доставка</a>
+              <a href="#" class="sitemap__link">Доставка</a>
             </li>
             <li class="sitemap__item">
-              <a href="" class="sitemap__link">Производство печатных плат</a>
+              <a href="#" class="sitemap__link">Производство печатных плат</a>
             </li>
             <li class="sitemap__item">
-              <a href="" class="sitemap__link">Контакты</a>
+              <a href="#" class="sitemap__link">Контакты</a>
             </li>
             <li class="sitemap__item">
-              <a href="" class="sitemap__link">Монтаж печатных плат</a>
+              <a href="#" class="sitemap__link">Монтаж печатных плат</a>
             </li>
           </ul>
         </section>
@@ -219,7 +223,7 @@
           <span class="contacts__button contacts__button--open"></span>
           <span class="contacts__button contacts__button--close hidden"></span>
           <div class="contacts__wrapper closed">
-          <span class="contacts__description">г. Мытищи, Олимпийский проспект, д.10</span>
+          <span>г. Мытищи, Олимпийский проспект, д.10</span>
           <a href="tel:+7(495)589-40-50" class="contacts__phone">+7 (495) 589-40-50</a>
           <a href="tel:+7(925)389-58-29" class="contacts__phone">+7 (925) 389-58-29</a>
           <a href="tel:+7(925)364-78-13" class="contacts__phone">+7 (925) 364-78-13</a>
@@ -234,16 +238,18 @@
         <h2 class="popup__title">Закажите звонок</h2>
         <span class="popup__close"></span>
         <p class="popup__description">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-        <form class="popup__form">
-          <input type="text" class="popup__name input" placeholder="Имя" required>
-          <input type="tel" class="popup__telephone input" placeholder="Телефон" required>
+        <form>
+          <input type="text" class="popup__name input" placeholder="Имя" id="text"required>
+          <label for="text" class="visually-hidden">Имя</label>
+          <input type="tel" class="popup__telephone input" placeholder="Телефон" required id="tel">
+          <label for="tel" class="visually-hidden">Телефон</label>
           <textarea cols="30" rows="10" class="popup__text input" placeholder="Ваш вопрос"></textarea>
         </form>
         <div class="popup__buttons">
         <button type="submit" class="popup__button button">Отправить</button>
-        <input type="checkbox" name="agree" class="popup__checkbox" id="agree___popup">
+        <input type="checkbox" name="agree" class="popup__checkbox" id="agree__popup">
         <label for="agree" class="popup__label">
-        <span class="popup__checkbox-name">Я согласен на обработку  персональных данных</span>
+        <span>Я согласен на обработку  персональных данных</span>
         </label>
       </div>
     </div>

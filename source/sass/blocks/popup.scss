@@ -55,7 +55,7 @@
   margin-top: 15px;
 }
 
-.popup__form {
+.popup__wrapper > form {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
@@ -101,10 +101,10 @@
   background: url("../img/checkbox.svg") no-repeat center;
 }
 
-.popup__checkbox-name {
+.popup__label > span {
   display: flex;
   justify-content: center;
-  font-family: 'PT Mono';
+  font-family: 'PT Mono', "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
