@@ -12,12 +12,11 @@ const sitemap = document.querySelector('.sitemap');
 const sitemapList = document.querySelector('.sitemap__list');
 const contacts = document.querySelector('.contacts');
 const contactsWrapper = document.querySelector('.contacts__wrapper');
-const sitemapOpenButton = document.querySelector('.sitemap__button--open');
-const sitemapCloseButton = document.querySelector('.sitemap__button--close');
+const sitemapOpenButton = document.getElementById('sitemap__button--open');
+const sitemapCloseButton = document.getElementById('sitemap__button--close');
 const contactsOpenButton = document.querySelector('.contacts__button--open');
 const contactsCloseButton = document.querySelector('.contacts__button--close');
 const phone = document.querySelector(".popup__telephone");
-
 
 navButton.addEventListener('click', () => {
   popup.classList.remove('closed');
@@ -37,7 +36,7 @@ popupCloseButton.addEventListener('click', () => {
 
 mainButton.addEventListener('click', () => {
   window.scrollTo({
-    top:3100, 
+    top:3100,
     left:3100,
     behavior: 'smooth'
   });
@@ -45,7 +44,7 @@ mainButton.addEventListener('click', () => {
 
 mainButtonMobile.addEventListener('click', () => {
   window.scrollTo({
-    top:5000, 
+    top:5000,
     left:5000,
     behavior: 'smooth'
   });
@@ -74,12 +73,13 @@ hideButton.addEventListener('click', () => {
 });
 
 sitemap.addEventListener('click', (evt) => {
+
   if (!contactsWrapper.classList.contains('hidden')) {
     contactsWrapper.classList.add('closed')
     contactsCloseButton.classList.add('hidden');
     contactsOpenButton.classList.remove('hidden');
   }
-  if (evt.target.classList.contains('sitemap__button--open')) {
+  if (evt.target === sitemapOpenButton) {
     sitemapOpenButton.classList.add('hidden');
     sitemapCloseButton.classList.remove('hidden');
     sitemapList.classList.remove('closed');
