@@ -3,6 +3,7 @@ const mainButton = document.querySelector('.main__button');
 const mainButtonMobile = document.querySelector('.main__button--mobile');
 const popup = document.querySelector('.popup');
 const popupContainer = document.querySelector('.popup__container');
+const popupWrapper = document.querySelector('.popup__wrapper');
 const popupNameField = document.querySelector('.popup__name');
 const popupCloseButton = document.querySelector('.popup__close');
 const aboutButton = document.querySelector('.about__button');
@@ -18,20 +19,32 @@ const contactsOpenButton = document.querySelector('.contacts__button--open');
 const contactsCloseButton = document.querySelector('.contacts__button--close');
 const phone = document.querySelector(".popup__telephone");
 
+
 navButton.addEventListener('click', () => {
   popup.classList.remove('closed');
   popupContainer.classList.remove('closed');
   popupContainer.classList.add('show')
   popup.classList.add('show')
   popupNameField.focus();
+  document.body.style.overflow = 'hidden';
 });
 
+popupContainer.addEventListener('keydown', (evt) => {
+  if (evt.key === "Escape") {
+    popup.classList.remove('show');
+    popupContainer.classList.remove('show');
+    popup.classList.add('closed');
+    popupContainer.classList.add('closed');
+  }
+})
 
-popupCloseButton.addEventListener('click', () => {
-  popup.classList.remove('show');
-  popupContainer.classList.remove('show');
-  popup.classList.add('closed');
-  popupContainer.classList.add('closed');
+popupContainer.addEventListener('click', (evt) => {
+  if (evt.target === popupCloseButton) {
+    popup.classList.remove('show');
+    popupContainer.classList.remove('show');
+    popup.classList.add('closed');
+    popupContainer.classList.add('closed');
+  }
 });
 
 mainButton.addEventListener('click', () => {

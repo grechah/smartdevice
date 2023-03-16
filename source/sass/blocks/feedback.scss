@@ -4,6 +4,7 @@
 
 .feedback__container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   column-gap: 120px;
   box-sizing: border-box;
@@ -45,7 +46,7 @@
   border: none;
   border-radius: 3px;
   padding: 15px;
-  color: #ffffff;
+  color: #041427;
 }
 
 .input:focus {
@@ -88,6 +89,7 @@
 .feedback__checkbox {
   margin-left: 20px;
   opacity: 0;
+  cursor: pointer;
 }
 
 .feedback__label {
@@ -102,6 +104,7 @@
   top: 7px;
   left: -28px;
   border: 1px solid #ffffff;
+  cursor: pointer;
 }
 
 .feedback__checkbox:checked + .feedback__label::before {
@@ -158,18 +161,20 @@
 
 .feedback__container {
   max-width: 100%;
+  padding: 0;
   padding-left: 25px;
   padding-right: 25px;
-  padding-bottom: 90px;
+  padding-bottom: 93px;
 }
 
 .feedback__wrapper {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.feedback__wrapper > form{
+.feedback__wrapper > form {
   display: flex;
   flex-direction: column;
 }
@@ -186,7 +191,24 @@
     left: 0;
   }
 
+  .feedback__title {
+    font-size: 30px;
+    line-height: 141%;
+    margin-top: 45px;
+  }
+
   .feedback__title + span {
-    margin-top: 20px;
+    margin-top: 9px;
+    font-size: 14px;
+    line-height: 135%;
+  }
+
+  .feedback__text {
+    padding-top: 30px;
+  }
+
+  .feedback__wrapper--buttons {
+    margin-top: 17px;
+    width: 100%;
   }
 }

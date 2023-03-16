@@ -15,6 +15,7 @@
 .blocks__item {
   box-sizing: border-box;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   min-width: 595px;
   width: 34%;
@@ -74,7 +75,7 @@
     padding-left: 25px;
     padding-right: 25px;
   }
-  
+
   .blocks__item {
     min-width: 320px;
     height: 410px;
@@ -86,5 +87,58 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 135%;
+  }
+}
+
+@media (max-width: 552px) {
+
+  .blocks__container {
+    margin-top: 50px;
+  }
+
+  .blocks {
+    margin-top: 0;
+  }
+
+  .blocks__list {
+    width: 100%;
+    padding: 0;
+  }
+
+
+  .blocks__item {
+    justify-content: unset;
+    height: unset;
+    min-height: 340px;
+    min-width: 100%;
+    padding: 30px 25px;
+  }
+
+  .blocks__item--confidential > h2 {
+    margin-top: 12px;
+  }
+
+  .blocks__item--confidential > p {
+    margin-top: 16px;
+  }
+
+  .blocks__item--terms {
+    border-left: none ;
+    padding: 30px;
+  }
+
+  .blocks__item--price {
+    padding-right: 35px;
+    padding-top: 19px;
+  }
+
+  .blocks__title {
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 140.62%;
+  }
+
+  .blocks__description {
+    margin-top: 9px;
   }
 }

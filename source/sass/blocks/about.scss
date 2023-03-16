@@ -69,21 +69,49 @@
 }
 
 @media (max-width: 769px) {
+
+  .about {
+    margin-top: 20px;
+  }
+
   .about__container {
     max-width: 100%;
-    margin-top: 50px;
-}
+  }
 
-.about__picture {
-  display: none;
-}
+  .about__picture {
+    display: none;
+  }
 
-.about__description::before {
-  left: -70%;
-}
+  .about__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 140.62%;
+  }
+
+  .about__description {
+    font-size: 14px;
+    line-height: 134.4%;
+    margin-top: 10px;
+  }
+
+  .about__description--mobile {
+    display: none;
+  }
+
+  .about__description::before {
+    left: -70%;
+  }
 
   .about::before {
     display: none;
+  }
+
+  .about__button {
+    font-size: 14px;
+    width: 160px;
+    height: 34px;
+    margin-top: 16px;
   }
 }
 
